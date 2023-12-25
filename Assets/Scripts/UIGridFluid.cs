@@ -50,7 +50,11 @@ public class UIGridFluid : MonoBehaviour
 
     private int NumX;
     private int NumY;
-
+    
+    public void ChangeVelocity(float value)
+    {
+        FirstVelocity = Mathf.Clamp01(value) * 1000f;
+    }
 
     private void Awake()
     {
